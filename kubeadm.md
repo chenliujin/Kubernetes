@@ -26,11 +26,14 @@ $ vim /usr/lib/systemd/system/docker.service
 ```
 
 
-# Master
+# Master & Node
 ```
+$ yum install -y socat
 $ rpm -ivh kubernetes-cni-0.5.1-0.x86_64.rpm kubelet-1.6.1-0.x86_64.rpm
 $ rpm -ivh kubeadm-1.6.1-0.x86_64.rpm kubectl-1.6.1-0.x86_64.rpm
 $ systemctl enable kubelet && systemctl start kubelet
+$ systemctl status kubelet
+$ kubelet logs
 ```
 
 
@@ -65,6 +68,13 @@ $ docker rmi docker rmi docker.io/ouyangnb/flannel:v0.7.0-amd64
 $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
+
+# Node
+```
+$ kubeadm join --token 7e5bbb.4fbbd530bc3fad91 x.x.x.x:6443
+```
+
+
 # 单机安装
 允许 Master 节点运行服务（无 node 节点）
 ```
@@ -74,7 +84,7 @@ $ kubectl taint nodes {$master_node} dedicated-
 
 
 # 参考文献
-- [kube 1.5.3需要的镜像](https://hub.docker.com/r/ist0ne/kube-proxy-amd64/)
+
 - [CentOS 7 安装Kubernetes 1.5.3 集群(本地安装)](http://yoyolive.com/2017/02/27/Kubernetes-1-5-3-Local-Install/)
 - [使用kubeadm安装kubernetes 1.5](http://blog.frognew.com/2017/01/install-kubernetes-with-kubeadm.html)
 - [kubeadm快速安装kubernetes](http://zkread.com/article/1233049.html)
@@ -82,3 +92,4 @@ $ kubectl taint nodes {$master_node} dedicated-
 
 # 参考文献
 - [kukubeadm 1.6.1 + docker1.2.6 安装问题](http://www.itdadao.com/articles/c15a1285927p0.html)
+- [kube 1.5.3需要的镜像](https://hub.docker.com/r/ist0ne/kube-proxy-amd64/)
