@@ -19,10 +19,17 @@
 
 
 # Docker Conf
+- difference of cgroupfs & and systemd?
 ```
 $ vim /usr/lib/systemd/system/docker.service
 
 --exec-opt native.cgroupdriver=cgroupfs
+```
+or
+```
+$ vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+...
+Environment="KUBELET_KUBECONFIG_ARGS=--kubeconfig=/etc/kubernetes/kubelet.conf --require-kubeconfig=true --cgroup-driver=systemd"
 ```
 
 
@@ -60,11 +67,19 @@ as root:
   kubeadm join --token 7e5bbb.4fbbd530bc3fad91 x.x.x.x:6443
 ```
 
+# ENV
+```
+$ vim ~/.bashrc
+export KUBECONFIG=/etc/kubernetes/admin.conf
+
+$ source ~/.bashrc
+```
+
 # Flannel
 ```
 $ docker pull docker.io/ouyangnb/flannel:v0.7.0-amd64
 $ docker tag docker.io/ouyangnb/flannel:v0.7.0-amd64  quay.io/coreos/flannel:v0.7.0-amd64
-$ docker rmi docker rmi docker.io/ouyangnb/flannel:v0.7.0-amd64
+$ docker rmi docker.io/ouyangnb/flannel:v0.7.0-amd64
 $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
