@@ -1,5 +1,6 @@
 ## Docker Images
 - gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.3
+- gcr.io/google_containers/defaultbackend:1.0
 
 # 参考文献
 - [Deploying the Nginx Ingress controller on kubeadm clusters](https://github.com/kubernetes/ingress/tree/master/examples/deployment/nginx/kubeadm)
