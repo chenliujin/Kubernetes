@@ -77,6 +77,10 @@ $ source /etc/profile
 
 # Flannel
 ```
+$ kubectl create -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel-rbac.yml
+clusterrole "flannel" created
+clusterrolebinding "flannel" created
+
 $ docker pull docker.io/ouyangnb/flannel:v0.7.0-amd64
 $ docker tag docker.io/ouyangnb/flannel:v0.7.0-amd64  quay.io/coreos/flannel:v0.7.0-amd64
 $ docker rmi docker.io/ouyangnb/flannel:v0.7.0-amd64
@@ -111,3 +115,4 @@ $ kubectl taint nodes {$master_node} dedicated-
 - [kubeadm 安装 k8s 1.6](http://blog.csdn.net/iiiiher/article/details/68946587)
 - [kukubeadm 1.6.1 + docker1.2.6 安装问题](http://www.itdadao.com/articles/c15a1285927p0.html)
 - [kube 1.5.3需要的镜像](https://hub.docker.com/r/ist0ne/kube-proxy-amd64/)
+- [使用kubeadm在ububtu16.04安装kubernetes1.6.1-flannel](http://blog.csdn.net/ximenghappy/article/details/70157361)
