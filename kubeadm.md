@@ -69,10 +69,10 @@ as root:
 
 # ENV
 ```
-$ vim ~/.bashrc
+$ vim /etc/profile 
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
-$ source ~/.bashrc
+$ source /etc/profile 
 ```
 
 # Flannel
@@ -81,6 +81,8 @@ $ docker pull docker.io/ouyangnb/flannel:v0.7.0-amd64
 $ docker tag docker.io/ouyangnb/flannel:v0.7.0-amd64  quay.io/coreos/flannel:v0.7.0-amd64
 $ docker rmi docker.io/ouyangnb/flannel:v0.7.0-amd64
 $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+$ kubectl get ds --all-namespaces
 ```
 
 
