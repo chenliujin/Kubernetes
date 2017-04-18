@@ -8,6 +8,7 @@ $ kubectl apply -f https://rawgit.com/kubernetes/ingress/master/examples/deploym
 ```
 
 # 参考文献
+- [Kubeadm using 1.6 - Ingess-Controller cant access API](https://github.com/kubernetes/ingress/issues/575)
 - [Deploying the Nginx Ingress controller on kubeadm clusters](https://github.com/kubernetes/ingress/tree/master/examples/deployment/nginx/kubeadm)
 - [kubernetes 1.6.1](https://jicki.me/2017/04/11/kargo-k8s-1.6.1/)
 - https://github.com/nginxinc/kubernetes-ingress
