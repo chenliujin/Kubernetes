@@ -112,6 +112,7 @@ $ kubectl taint nodes {$master_node} dedicated-
 
 
 # 参考文献
+- [阿里云快速部署Kubernetes - VPC环境](https://yq.aliyun.com/articles/66474?commentId=6660)
 - [kubeadm 安装 k8s 1.6](http://blog.csdn.net/iiiiher/article/details/68946587)
 - [kukubeadm 1.6.1 + docker1.2.6 安装问题](http://www.itdadao.com/articles/c15a1285927p0.html)
 - [kube 1.5.3需要的镜像](https://hub.docker.com/r/ist0ne/kube-proxy-amd64/)
