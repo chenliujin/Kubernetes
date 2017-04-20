@@ -7,6 +7,12 @@
 $ kubectl apply -f https://rawgit.com/kubernetes/ingress/master/examples/deployment/nginx/kubeadm/nginx-ingress-controller.yaml
 ```
 
+## Notice
+- 注意 nginx-ingress 启动的服务不一定在 Master 主机上，在 1 Master 1 Node 的集群环境中发现 nginx-ingress 在 Node 中启动了
+```
+$ netstat -anp | grep 80
+```
+
 # 参考文献
 - [Ingress Resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 - [Kubeadm using 1.6 - Ingess-Controller cant access API](https://github.com/kubernetes/ingress/issues/575)
