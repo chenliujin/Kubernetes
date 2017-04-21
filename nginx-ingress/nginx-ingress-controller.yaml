@@ -115,7 +115,8 @@ spec:
         # Any image is permissable as long as:
         # 1. It serves a 404 page at /
         # 2. It serves 200 on a /healthz endpoint
-        image: gcr.io/google_containers/defaultbackend:1.0
+        image: gcr.io/google_containers/defaultbackend:1.3
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /healthz
@@ -176,6 +177,7 @@ spec:
       serviceAccountName: ingress
       containers:
       - image: gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.3
+        imagePullPolicy: IfNotPresent
         name: nginx-ingress-controller
         readinessProbe:
           httpGet:
