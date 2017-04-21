@@ -47,7 +47,7 @@ $ kubelet logs
 ## Master init
 ```
 $ kubeadm reset
-$ kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.1.100 //使用内外地址
+$ kubeadm init --kubernetes-version=v1.6.2 --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.1.100 //使用内外地址
 
 Your Kubernetes master has initialized successfully!
 
@@ -81,9 +81,9 @@ $ kubectl create -f https://github.com/coreos/flannel/raw/master/Documentation/k
 clusterrole "flannel" created
 clusterrolebinding "flannel" created
 
-$ docker pull docker.io/ouyangnb/flannel:v0.7.0-amd64
-$ docker tag docker.io/ouyangnb/flannel:v0.7.0-amd64  quay.io/coreos/flannel:v0.7.0-amd64
-$ docker rmi docker.io/ouyangnb/flannel:v0.7.0-amd64
+$ docker pull docker.io/ouyangnb/flannel:v0.7.1-amd64
+$ docker tag docker.io/ouyangnb/flannel:v0.7.1-amd64  quay.io/coreos/flannel:v0.7.1-amd64
+$ docker rmi docker.io/ouyangnb/flannel:v0.7.1-amd64
 $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 $ kubectl get ds --all-namespaces
@@ -105,13 +105,16 @@ $ kubectl taint nodes {$master_node} dedicated-
 
 
 # 参考文献
+- [官方安装文档](https://kubernetes.io/docs/getting-started-guides/kubeadm/)
+
+
+
 
 - [CentOS 7 安装Kubernetes 1.5.3 集群(本地安装)](http://yoyolive.com/2017/02/27/Kubernetes-1-5-3-Local-Install/)
 - [使用kubeadm安装kubernetes 1.5](http://blog.frognew.com/2017/01/install-kubernetes-with-kubeadm.html)
 - [kubeadm快速安装kubernetes](http://zkread.com/article/1233049.html)
 
 
-# 参考文献
 - [阿里云快速部署Kubernetes - VPC环境](https://yq.aliyun.com/articles/66474?commentId=6660)
 - [kubeadm 安装 k8s 1.6](http://blog.csdn.net/iiiiher/article/details/68946587)
 - [kukubeadm 1.6.1 + docker1.2.6 安装问题](http://www.itdadao.com/articles/c15a1285927p0.html)
