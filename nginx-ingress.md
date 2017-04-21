@@ -18,6 +18,28 @@ $ kubectl get pods --all-namespaces -o wide
 $ netstat -anp | grep 80
 ```
 
+## Nginx Ingress
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: site-ingress
+spec:
+  rules:
+  - host: www.example.com 
+    http:
+      paths:
+      - path: /blog
+        backend:
+          serviceName: blog
+          servicePort: 80
+      - path: /music
+        backend:
+          serviceName: music
+          servicePort: 80
+
+```
+
 # 参考文献
 - [Ingress Resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 - [Kubeadm using 1.6 - Ingess-Controller cant access API](https://github.com/kubernetes/ingress/issues/575)
