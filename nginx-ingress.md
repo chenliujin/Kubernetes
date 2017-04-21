@@ -24,3 +24,4 @@ $ netstat -anp | grep 80
 - [Deploying the Nginx Ingress controller on kubeadm clusters](https://github.com/kubernetes/ingress/tree/master/examples/deployment/nginx/kubeadm)
 - [kubernetes 1.6.1](https://jicki.me/2017/04/11/kargo-k8s-1.6.1/)
 - https://github.com/nginxinc/kubernetes-ingress
+- [Load Balancing Kubernetes Services with NGINX Plus](https://www.nginx.com/blog/load-balancing-kubernetes-services-nginx-plus/)
