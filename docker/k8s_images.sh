@@ -9,7 +9,6 @@ images=(\
 	k8s-dns-sidecar-amd64:1.14.1 \ 
 	k8s-dns-kube-dns-amd64:1.14.1 \ 
 	k8s-dns-dnsmasq-nanny-amd64:1.14.1 \ 
-	flannel:v0.7.1-amd64 \ 
 	kubernetes-dashboard-amd64:v1.6.0 \ 
 	defaultbackend:1.3 \ 
 	nginx-ingress-controller:0.9.0-beta.3)
