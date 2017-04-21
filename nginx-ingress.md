@@ -8,10 +8,11 @@ $ kubectl apply -f https://rawgit.com/kubernetes/ingress/master/examples/deploym
 ```
 
 ## Notice
-- 注意 nginx-ingress 启动的服务不一定在 Master 主机上，在 1 Master 1 Node 的集群环境中发现 nginx-ingress 在 Node 中启动了
+- 设置 nginx-ingress 启动数量：replicas=Node的数量
+- 配置 DNS 轮询
 ```
 # 查看 nginx ingress pod 所在的服务器
-$ kubectl get pods -o wide --all-namespaces
+$ kubectl get pods --all-namespaces -o wide
 
 # 登录所在服务器查看端口是否启用
 $ netstat -anp | grep 80
