@@ -5,10 +5,10 @@
 - kubernetes-cni-0.5.1
 
 # Kubernetes Images
-- gcr.io/google_containers/kube-proxy-amd64:v1.6.0
-- gcr.io/google_containers/kube-scheduler-amd64:v1.6.0
-- gcr.io/google_containers/kube-controller-manager-amd64:v1.6.0
-- gcr.io/google_containers/kube-apiserver-amd64:v1.6.0
+- gcr.io/google_containers/kube-proxy-amd64:v1.6.2
+- gcr.io/google_containers/kube-scheduler-amd64:v1.6.2
+- gcr.io/google_containers/kube-controller-manager-amd64:v1.6.2
+- gcr.io/google_containers/kube-apiserver-amd64:v1.6.2
 - gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.3
 - gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.0
 - gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.1
