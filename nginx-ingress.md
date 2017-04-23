@@ -40,6 +40,9 @@ spec:
 
 ```
 
+# TLS
+
+
 # 参考文献
 - [Ingress Resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 - [Kubeadm using 1.6 - Ingess-Controller cant access API](https://github.com/kubernetes/ingress/issues/575)
