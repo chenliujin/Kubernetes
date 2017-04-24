@@ -42,6 +42,14 @@ spec:
 
 # TLS
 
+- [Nginx ingress beta.v3 not enabling TLS]https://github.com/kubernetes/ingress/issues/518
+处理办法：先创建站点的 ingress，后创建 nginx-ingress-controller，如果已经创建，则先删除再重建
+```
+$ kubectl create -f site-ingress.yaml
+$ kubectl delete -f nginx-ingress-controller.yaml
+$ kubectl create -f nginx-ingress-controller.yaml
+```
+
 
 # 参考文献
 - [Ingress Resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
