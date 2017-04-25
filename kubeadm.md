@@ -7,12 +7,22 @@
 - kubelet-1.6.1
 - kubernetes-cni-0.5.1
 
+# Install 
+```
+$ yum install -y socat
+$ rpm -ivh kubernetes-cni-0.5.1-0.x86_64.rpm kubelet-1.6.1-0.x86_64.rpm
+$ rpm -ivh kubeadm-1.6.1-0.x86_64.rpm kubectl-1.6.1-0.x86_64.rpm
+$ systemctl enable kubelet && systemctl start kubelet
+$ systemctl status kubelet
+$ kubelet logs
+```
+
 # Kubernetes Images
 - gcr.io/google_containers/kube-apiserver-amd64:v1.6.2
 - gcr.io/google_containers/kube-controller-manager-amd64:v1.6.2
 - gcr.io/google_containers/kube-scheduler-amd64:v1.6.2
 - gcr.io/google_containers/kube-proxy-amd64:v1.6.2
-- gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.3
+- gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.4
 - gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.0
 - gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.1
 - gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.1
@@ -33,18 +43,12 @@ or
 $ vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 ...
 Environment="KUBELET_KUBECONFIG_ARGS=--kubeconfig=/etc/kubernetes/kubelet.conf --require-kubeconfig=true --cgroup-driver=systemd"
+
+$ systemctl daemon-reload
+$ systemctl restart kubelet
 ```
 
 
-# Master & Node
-```
-$ yum install -y socat
-$ rpm -ivh kubernetes-cni-0.5.1-0.x86_64.rpm kubelet-1.6.1-0.x86_64.rpm
-$ rpm -ivh kubeadm-1.6.1-0.x86_64.rpm kubectl-1.6.1-0.x86_64.rpm
-$ systemctl enable kubelet && systemctl start kubelet
-$ systemctl status kubelet
-$ kubelet logs
-```
 
 
 ## Master init
