@@ -98,6 +98,14 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 ```
 
+```
+$ yum install bridge-utils
+
+$ ifconfig  cni0 down
+$ brctl delbr cni0
+$ ip link delete flannel.1
+```
+
 
 # Node
 ```
