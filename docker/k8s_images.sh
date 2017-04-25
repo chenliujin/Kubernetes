@@ -11,7 +11,7 @@ images=(\
 	k8s-dns-dnsmasq-nanny-amd64:1.14.1 \ 
 	kubernetes-dashboard-amd64:v1.6.0 \ 
 	defaultbackend:1.3 \ 
-	nginx-ingress-controller:0.9.0-beta.3)
+	nginx-ingress-controller:0.9.0-beta.4)
 for imageName in ${images[@]} ; do
   docker pull 	docker.io/chenliujin/$imageName
   docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
