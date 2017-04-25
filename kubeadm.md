@@ -84,27 +84,27 @@ $ source /etc/profile
 
 # Flannel
 ```
-$ kubectl create -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel-rbac.yml
-clusterrole "flannel" created
-clusterrolebinding "flannel" created
-
 $ docker pull docker.io/ouyangnb/flannel:v0.7.1-amd64
 $ docker tag docker.io/ouyangnb/flannel:v0.7.1-amd64  quay.io/coreos/flannel:v0.7.1-amd64
 $ docker rmi docker.io/ouyangnb/flannel:v0.7.1-amd64
-$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+
+$ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel-rbac.yml
+$ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
 
 $ kubectl get ds --all-namespaces
 
-$ ip link delete flannel.1
 
 $ vim /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 ```
 
+# 重置 iptables 
 ```
 $ yum install bridge-utils
-
+$ iptables -t nat -F
 $ ifconfig  cni0 down
 $ brctl delbr cni0
 $ ip link delete flannel.1
@@ -124,6 +124,13 @@ $ kubeadm join --token 7e5bbb.4fbbd530bc3fad91 x.x.x.x:6443
 ```
 $ kubectl get nodes
 $ kubectl taint nodes {$master_node} dedicated-
+```
+
+# 删除节点（Tear down）
+```
+$ kubectl drain <node name> --delete-local-data --force --ignore-daemonsets
+$ kubectl delete node <node name>
+$ kubeadm reset
 ```
 
 
