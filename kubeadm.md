@@ -90,6 +90,12 @@ $ docker rmi docker.io/ouyangnb/flannel:v0.7.1-amd64
 $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 $ kubectl get ds --all-namespaces
+
+$ ip link delete flannel.1
+
+$ vim /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
 ```
 
 
