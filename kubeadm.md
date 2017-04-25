@@ -110,6 +110,8 @@ $ brctl delbr cni0
 $ ip link delete flannel.1
 ```
 
+## firewalld 检查
+
 
 # Node
 ```
