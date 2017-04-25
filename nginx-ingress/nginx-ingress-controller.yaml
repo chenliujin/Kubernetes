@@ -176,7 +176,7 @@ spec:
       terminationGracePeriodSeconds: 60
       serviceAccountName: ingress
       containers:
-      - image: gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.3
+      - image: gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.4
         imagePullPolicy: IfNotPresent
         name: nginx-ingress-controller
         readinessProbe:
