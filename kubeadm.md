@@ -32,15 +32,6 @@ $ kubelet logs
 - gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.0
 
 
-# Docker Conf
-- difference of cgroupfs & and systemd?
-```
-$ vim /usr/lib/systemd/system/docker.service
-
---exec-opt native.cgroupdriver=cgroupfs
-```
-
-
 
 
 ## Master init
