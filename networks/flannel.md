@@ -9,6 +9,7 @@ $ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Docu
 
 # firewalld
 ```
+$ systemctl status firewalld
 $ systemctl stop firewalld
 ```
 
