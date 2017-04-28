@@ -1,4 +1,11 @@
 
+
+# firewalld
+```
+$ systemctl stop firewalld
+```
+
+
 ```
 $ kubectl apply -f http://aliacs-k8s.oss-cn-hangzhou.aliyuncs.com/conf/flannel-vxlan.yml
 ```
