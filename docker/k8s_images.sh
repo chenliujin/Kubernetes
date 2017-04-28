@@ -1,9 +1,9 @@
 #!/bin/bash
 images=(\ 
-	kube-apiserver-amd64:v1.6.0 \ 
-	kube-controller-manager-amd64:v1.6.0 \ 
-	kube-scheduler-amd64:v1.6.0 \ 
-	kube-proxy-amd64:v1.6.0 \ 
+	kube-apiserver-amd64:v1.6.2 \ 
+	kube-controller-manager-amd64:v1.6.2 \ 
+	kube-scheduler-amd64:v1.6.2 \ 
+	kube-proxy-amd64:v1.6.2 \ 
 	etcd-amd64:3.0.17 \ 
 	pause-amd64:3.0 \ 
 	k8s-dns-sidecar-amd64:1.14.1 \ 
