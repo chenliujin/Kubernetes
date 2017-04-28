@@ -2,17 +2,22 @@
 - 必须联网
 
 # [Download RPM](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml)
-- kubeadm-1.6.1
-- kubectl-1.6.1
-- kubelet-1.6.1
+- kubeadm-1.6.2
+- kubectl-1.6.2
+- kubelet-1.6.2
 - kubernetes-cni-0.5.1
 
 # Install 
 ```
 $ yum install -y socat
-$ rpm -ivh kubernetes-cni-0.5.1-0.x86_64.rpm kubelet-1.6.1-0.x86_64.rpm
-$ rpm -ivh kubeadm-1.6.1-0.x86_64.rpm kubectl-1.6.1-0.x86_64.rpm
+$ yum install -y kubeadm-1.6.2-0.x86_64.rpm kubectl-1.6.2-0.x86_64.rpm kubelet-1.6.2-0.x86_64.rpm kubernetes-cni-0.5.1-0.x86_64.rpm
+
+$ vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+Environment="KUBELET_KUBECONFIG_ARGS=--kubeconfig=/etc/kubernetes/kubelet.conf --require-kubeconfig=true --cgroup-driver=systemd"
+
+$ systemctl restart docker
 $ systemctl enable kubelet && systemctl start kubelet
+
 $ systemctl status kubelet
 $ kubelet logs
 ```
@@ -22,13 +27,13 @@ $ kubelet logs
 - gcr.io/google_containers/kube-controller-manager-amd64:v1.6.2
 - gcr.io/google_containers/kube-scheduler-amd64:v1.6.2
 - gcr.io/google_containers/kube-proxy-amd64:v1.6.2
+- gcr.io/google_containers/etcd-amd64:3.0.17
+- gcr.io/google_containers/pause-amd64:3.0
+- gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.1
+- gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.1
+- gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.1
 - gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.4
 - gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.0
-- gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.1
-- gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.1
-- gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.1
-- gcr.io/google_containers/pause-amd64:3.0
-- gcr.io/google_containers/etcd-amd64:3.0.17
 
 
 # Docker Conf
@@ -37,15 +42,6 @@ $ kubelet logs
 $ vim /usr/lib/systemd/system/docker.service
 
 --exec-opt native.cgroupdriver=cgroupfs
-```
-or
-```
-$ vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-...
-Environment="KUBELET_KUBECONFIG_ARGS=--kubeconfig=/etc/kubernetes/kubelet.conf --require-kubeconfig=true --cgroup-driver=systemd"
-
-$ systemctl daemon-reload
-$ systemctl restart kubelet
 ```
 
 
