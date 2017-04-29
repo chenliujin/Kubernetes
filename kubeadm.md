@@ -92,7 +92,6 @@ $ ifconfig  cni0 down
 $ brctl delbr cni0
 $ ip link delete flannel.1
 $ systemctl restart kubelet
-$ systemctl restart docker
 ```
 
 ## firewalld 检查
@@ -115,6 +114,11 @@ $ kubectl taint nodes {$master_node} dedicated-
 ```
 $ kubectl drain <node name> --delete-local-data --force --ignore-daemonsets
 $ kubectl delete node <node name>
+```
+
+# 忘记 Token
+```
+$ kubeadm token list
 ```
 
 
