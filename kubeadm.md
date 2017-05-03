@@ -136,6 +136,7 @@ $ kubeadm reset
 
 # 参考文献
 - [官方安装文档](https://kubernetes.io/docs/getting-started-guides/kubeadm/)
+- [当 Kubernetes 遇到阿里云 之 快速部署1.6.1版本](https://yq.aliyun.com/articles/73922?spm=5176.100239.0.0.nmDR1u)
 
 
 
