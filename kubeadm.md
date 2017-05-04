@@ -108,6 +108,8 @@ $ iptables -t nat -F
 $ ifconfig  cni0 down
 $ brctl delbr cni0
 $ ip link delete flannel.1
+$ systemctl restart kubelet
+$ systemctl restart docker
 ```
 
 ## firewalld 检查
