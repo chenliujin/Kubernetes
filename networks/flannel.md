@@ -7,6 +7,12 @@ $ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Docu
 
 
 
+# firewalld
+```
+$ systemctl stop firewalld
+```
+
+
 ```
 $ kubectl apply -f http://aliacs-k8s.oss-cn-hangzhou.aliyuncs.com/conf/flannel-vxlan.yml
 ```
