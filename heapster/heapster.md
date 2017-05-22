@@ -1,4 +1,8 @@
 
+# Heapster
+```
+$ kubectl create -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/rbac/heapster-rbac.yaml
+```
 
 # 参考文献
 - [Heapster Github](https://github.com/kubernetes/heapster)
