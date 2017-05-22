@@ -39,6 +39,7 @@ spec:
 ```
 
 # 参考文献
+- [Heapster Metrics](https://github.com/kubernetes/heapster/blob/master/docs/storage-schema.md)
 - [Tools for Monitoring Compute, Storage, and Network Resources](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
 - [Heapster Github](https://github.com/kubernetes/heapster)
 - [heapster-rbac.yaml](https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/rbac/heapster-rbac.yaml)
@@ -49,5 +50,4 @@ spec:
 
 - [Monitoring Kubernetes with Heapster](https://deis.com/blog/2016/monitoring-kubernetes-with-heapster/)
 - https://my.oschina.net/fufangchun/blog/730535
-- http://www.jianshu.com/p/60069089c981
 - http://jerrymin.blog.51cto.com/3002256/1904460
