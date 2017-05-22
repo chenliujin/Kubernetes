@@ -7,7 +7,7 @@
 - kubelet-1.6.2
 - kubernetes-cni-0.5.1
 
-# Install 
+# Install
 ```
 $ yum install -y socat
 $ yum install -y kubeadm-1.6.2-0.x86_64.rpm kubectl-1.6.2-0.x86_64.rpm kubelet-1.6.2-0.x86_64.rpm kubernetes-cni-0.5.1-0.x86_64.rpm
@@ -59,10 +59,10 @@ as root:
 
 # ENV
 ```
-$ vim /etc/profile 
+$ vim /etc/profile
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
-$ source /etc/profile 
+$ source /etc/profile
 ```
 
 
@@ -97,6 +97,7 @@ $ kubeadm token list
 
 
 
+- [kubernetes / understanding CPU resources limits](https://stackoverflow.com/questions/42326645/kubernetes-understanding-cpu-resources-limits)
 
 - [CentOS 7 安装Kubernetes 1.5.3 集群(本地安装)](http://yoyolive.com/2017/02/27/Kubernetes-1-5-3-Local-Install/)
 - [使用kubeadm安装kubernetes 1.5](http://blog.frognew.com/2017/01/install-kubernetes-with-kubeadm.html)
