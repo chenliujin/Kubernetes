@@ -12,6 +12,8 @@ images=(\
 	kubernetes-dashboard-amd64:v1.6.0 \ 
 	defaultbackend:1.3 \ 
 	heapster:v1.3.0 \ 
+	heapster-influxdb-amd64:v1.1.1 \ 
+	heapster-grafana-amd64:v4.0.2 \ 
 	nginx-ingress-controller:0.9.0-beta.5)
 for imageName in ${images[@]} ; do
   docker pull 	docker.io/chenliujin/$imageName
