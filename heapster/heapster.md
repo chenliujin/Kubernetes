@@ -34,6 +34,7 @@ spec:
 ```
 
 # 参考文献
+- [Tools for Monitoring Compute, Storage, and Network Resources](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
 - [Heapster Github](https://github.com/kubernetes/heapster)
 - [heapster-rbac.yaml](https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/rbac/heapster-rbac.yaml)
 - [heapster.yaml](https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/heapster.yaml)
