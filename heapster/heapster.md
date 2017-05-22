@@ -1,7 +1,12 @@
 
+# k8s install
 ```
-$ kubectl create -f https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/rbac/heapster-rbac.yaml
+$ kubectl create -f ./kube-config/ 
 ```
+
+
+# Influxdb
+## Ingress
 
 # Grafana
 
