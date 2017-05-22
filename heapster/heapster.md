@@ -1,7 +1,7 @@
 
 # k8s install
 ```
-$ kubectl create -f ./kube-config/ 
+$ kubectl create -f ./kube-config/
 ```
 
 
@@ -29,7 +29,7 @@ metadata:
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: www.chenliujin.com 
+  - host: www.chenliujin.com
     http:
       paths:
       - path: /grafana/
@@ -40,6 +40,7 @@ spec:
 
 # 参考文献
 - [Heapster Metrics](https://github.com/kubernetes/heapster/blob/master/docs/storage-schema.md)
+- [kubernetes+docker监控之简介](https://my.oschina.net/fufangchun/blog/714530)
 - [Tools for Monitoring Compute, Storage, and Network Resources](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
 - [Heapster Github](https://github.com/kubernetes/heapster)
 - [heapster-rbac.yaml](https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/rbac/heapster-rbac.yaml)
