@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kibana-ingress
+  namespace: kube-system
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: www.chenliujin.com 
+    http:
+      paths:
+      - path: /kibana/
+        backend:
+          serviceName: kibana-logging 
+          servicePort: 5601
+  tls:
+  - hosts:
+    - www.chenliujin.com 
+    secretName: www.chenliujin.com 
+
