@@ -11,3 +11,4 @@
 - [Kubernetes容器集群中的日志系统集成实践](http://www.yunweipai.com/archives/8797.html)
 - [fluentd github](https://github.com/fluent/fluentd-kubernetes-daemonset/blob/master/fluentd-daemonset-elasticsearch.yaml)
 - [fluentd](http://docs.fluentd.org/v0.12/articles/kubernetes-fluentd)
+- [ELK stack on Kubernetes](https://crondev.com/elk-stack-kubernetes/)
