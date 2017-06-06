@@ -7,3 +7,4 @@
 - [使用Fluentd和ElasticSearch Stack实现Kubernetes的集群Logging](https://sanwen.net/a/wftbfqo.html)
 - [https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/master/manifests/EFK](https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/master/manifests/EFK)
 - https://github.com/cafebazaar/charts/tree/master/logging/templates
+- http://www.golangtc.com/t/58ef557eb09ecc2e180004d6
