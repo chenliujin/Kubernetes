@@ -8,3 +8,4 @@
 - [https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/master/manifests/EFK](https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/master/manifests/EFK)
 - https://github.com/cafebazaar/charts/tree/master/logging/templates
 - http://www.golangtc.com/t/58ef557eb09ecc2e180004d6
+- [Kubernetes容器集群中的日志系统集成实践](http://www.yunweipai.com/archives/8797.html)
