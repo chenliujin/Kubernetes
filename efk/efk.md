@@ -22,3 +22,4 @@ remove --log-driver=journald, or /var/log/containers/ has no logs
 - [fluentd github](https://github.com/fluent/fluentd-kubernetes-daemonset/blob/master/fluentd-daemonset-elasticsearch.yaml)
 - [fluentd](http://docs.fluentd.org/v0.12/articles/kubernetes-fluentd)
 - [ELK stack on Kubernetes](https://crondev.com/elk-stack-kubernetes/)
+- https://github.com/pires/kubernetes-elasticsearch-cluster
