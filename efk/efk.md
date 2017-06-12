@@ -1,4 +1,14 @@
 
+# open docker log
+```
+$ vim /etc/sysconfig/docker
+remove --log-driver=journald, or /var/log/containers/ has no logs
+```
+
+# Q&A
+### cat /var/log/fluentd.log
+/var/log/containers/fluentd-es-v1.22-bq4m4_kube-system_fluentd-es-e1a5eac939847469fe5fa5b2c4fc4d55a8026ee1b7454603942c4e85b0a77964.log unreadable
+- [/var/log/containers no logs](https://stackoverflow.com/questions/41319233/kubelet-does-not-create-symlinks-to-var-log-containers)
 
 
 # 参考文献
