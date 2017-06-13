@@ -13,7 +13,6 @@ $ yum install -y socat
 $ yum install -y kubeadm-1.6.4-0.x86_64.rpm kubectl-1.6.4-0.x86_64.rpm kubelet-1.6.4-0.x86_64.rpm kubernetes-cni-0.5.1-0.x86_64.rpm
 
 $ systemctl enable kubelet && systemctl start kubelet
-
 $ systemctl status kubelet
 $ kubelet logs
 ```
