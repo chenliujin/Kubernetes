@@ -7,7 +7,7 @@ images=(\
 	k8s-dns-sidecar-amd64:1.14.2 \ 
 	k8s-dns-kube-dns-amd64:1.14.2 \ 
 	k8s-dns-dnsmasq-nanny-amd64:1.14.2 \ 
-	nginx-ingress-controller:0.9.0-beta.7 \ 
+	nginx-ingress-controller:0.9.0-beta.8 \ 
 	kubernetes-dashboard-amd64:v1.6.1
 	)
 for imageName in ${images[@]} ; do
