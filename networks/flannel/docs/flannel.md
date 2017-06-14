@@ -5,6 +5,7 @@ $ docker tag 	docker.io/chenliujin/flannel:v0.7.1-amd64  quay.io/coreos/flannel:
 $ docker rmi 	docker.io/chenliujin/flannel:v0.7.1-amd64
 ```
 
+# CentOS 7
 ```
 $ vim /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
