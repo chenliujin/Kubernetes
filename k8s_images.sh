@@ -7,8 +7,9 @@ images=(\
 	k8s-dns-sidecar-amd64:1.14.2 \ 
 	k8s-dns-kube-dns-amd64:1.14.2 \ 
 	k8s-dns-dnsmasq-nanny-amd64:1.14.2 \ 
-	nginx-ingress-controller:0.9.0-beta.8 \ 
-	kubernetes-dashboard-amd64:v1.6.1
+	kubernetes-dashboard-amd64:v1.6.1 \ 
+	defaultbackend:1.0 \ 
+	nginx-ingress-controller:0.9.0-beta.8
 	)
 for imageName in ${images[@]} ; do
 	docker pull 	docker.io/chenliujin/$imageName
