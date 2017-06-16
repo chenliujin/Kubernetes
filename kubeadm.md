@@ -90,6 +90,9 @@ $ kubectl delete node <node name>
 $ kubeadm token list
 ```
 
+# 注意
+- Master 不运行服务相关的 pod，否则 Master 资源不足，相关的调度就会中断
+
 
 # 参考文献
 - [官方安装文档](https://kubernetes.io/docs/getting-started-guides/kubeadm/)
