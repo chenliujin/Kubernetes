@@ -4,6 +4,7 @@ images=(\
 	kube-controller-manager-amd64:v1.6.4 \ 
 	kube-scheduler-amd64:v1.6.4 \ 
 	kube-proxy-amd64:v1.6.4 \ 
+	etcd-amd64:3.0.17 \ 
 	k8s-dns-sidecar-amd64:1.14.2 \ 
 	k8s-dns-kube-dns-amd64:1.14.2 \ 
 	k8s-dns-dnsmasq-nanny-amd64:1.14.2 \ 
