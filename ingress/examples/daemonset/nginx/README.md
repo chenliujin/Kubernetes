@@ -1,3 +1,4 @@
+不需要 DaemonSet，开通不限流量的公网服务器一台做 ingress 即可。
 
 ## RBAC
 
