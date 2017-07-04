@@ -28,5 +28,5 @@ rules:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: ingress
+  name: nginx-ingress-serviceaccount
   namespace: kube-system
