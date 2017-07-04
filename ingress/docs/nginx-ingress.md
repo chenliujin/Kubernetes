@@ -2,8 +2,15 @@
 - gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.8
 - gcr.io/google_containers/defaultbackend:1.3
 
+
 ## Controller
 ```
+$ kubectl create -f nginx-ingress-controller-rbac.yml
+$ kubectl create -f default-backend.yml  
+$ kubectl create -f nginx-ingress-controller.yml 
+$ kubectl create -f nginx-ingress-controller-service.yml 
+
+
 $ kubectl apply -f https://rawgit.com/kubernetes/ingress/master/examples/deployment/nginx/kubeadm/nginx-ingress-controller.yaml
 ```
 
@@ -47,13 +54,10 @@ spec:
 ```
 $ kubectl create -f site-ingress.yaml
 $ kubectl delete -f nginx-ingress-controller.yaml
-$ kubectl create -f nginx-ingress-controller.yaml
 ```
 
 
 # 参考文献
-- https://github.com/kubernetes/ingress/tree/master/examples/rbac/nginx
-
 - [Ingress Resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 - [Kubeadm using 1.6 - Ingess-Controller cant access API](https://github.com/kubernetes/ingress/issues/575)
 - [Deploying the Nginx Ingress controller on kubeadm clusters](https://github.com/kubernetes/ingress/tree/master/examples/deployment/nginx/kubeadm)
