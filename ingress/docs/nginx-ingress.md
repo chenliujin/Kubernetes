@@ -1,8 +1,3 @@
-## Docker Images
-- gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.8
-- gcr.io/google_containers/defaultbackend:1.3
-
-
 ## Controller
 ```
 $ kubectl create -f nginx-ingress-controller-rbac.yml
@@ -46,16 +41,6 @@ spec:
           servicePort: 80
 
 ```
-
-# TLS
-
-- [Nginx ingress beta.v3 not enabling TLS]https://github.com/kubernetes/ingress/issues/518
-处理办法：先创建站点的 ingress，后创建 nginx-ingress-controller，如果已经创建，则先删除再重建，否则后创建的 TLS 规则将不生效
-```
-$ kubectl create -f site-ingress.yaml
-$ kubectl delete -f nginx-ingress-controller.yaml
-```
-
 
 # 参考文献
 - [Ingress Resources](https://kubernetes.io/docs/concepts/services-networking/ingress/)
