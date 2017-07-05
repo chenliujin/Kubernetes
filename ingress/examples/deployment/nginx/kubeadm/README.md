@@ -8,6 +8,7 @@ $ kubectl create -f nginx-ingress-controller.yaml
 
 
 
+# files
 - https://github.com/kubernetes/ingress/blob/master/examples/rbac/nginx/nginx-ingress-controller-rbac.yml
 - https://github.com/kubernetes/ingress/blob/master/examples/deployment/nginx/kubeadm/nginx-ingress-controller.yaml
 
