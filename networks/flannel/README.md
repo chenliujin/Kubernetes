@@ -8,8 +8,8 @@ $ docker rmi 	docker.io/chenliujin/flannel:v0.7.1-amd64
 # CentOS 7
 ```
 $ vim /etc/sysctl.d/k8s.conf
-net.bridge.bridge-nf-call-ip6tables = 1
-net.bridge.bridge-nf-call-iptables = 1
+#net.bridge.bridge-nf-call-ip6tables = 1
+#net.bridge.bridge-nf-call-iptables = 1
 ```
 
 # 重置 iptables 
@@ -17,7 +17,7 @@ net.bridge.bridge-nf-call-iptables = 1
 $ yum install bridge-utils
 $ iptables -t nat -F
 $ ifconfig  cni0 down
-$ brctl delbr cni0
+$ #brctl delbr cni0
 $ ip link delete flannel.1
 $ systemctl restart kubelet
 ```
