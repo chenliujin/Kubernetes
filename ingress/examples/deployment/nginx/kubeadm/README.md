@@ -1,4 +1,13 @@
 
+
+# run
+```
+$ kubectl create -f nginx-ingress-controller-rbac.yml
+$ kubectl create -f nginx-ingress-controller.yaml
+```
+
+
+
 - https://github.com/kubernetes/ingress/blob/master/examples/rbac/nginx/nginx-ingress-controller-rbac.yml
 - https://github.com/kubernetes/ingress/blob/master/examples/deployment/nginx/kubeadm/nginx-ingress-controller.yaml
 
