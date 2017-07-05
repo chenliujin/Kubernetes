@@ -1,6 +1,12 @@
 # Master
 - 必须联网
 
+# CentOS 7
+```
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
+```
+
 # [Download RPM](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml)
 - kubeadm-1.6.6
 - kubectl-1.6.6
@@ -15,12 +21,6 @@ $ yum install -y kubeadm-1.6.6-0.x86_64.rpm kubectl-1.6.6-0.x86_64.rpm kubelet-1
 $ systemctl enable kubelet && systemctl start kubelet
 $ systemctl status kubelet
 $ kubelet logs
-```
-
-# CentOS 7
-```
-echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
-echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
 ```
 
 # Kubernetes Images
