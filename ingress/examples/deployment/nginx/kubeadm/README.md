@@ -6,6 +6,10 @@ $ kubectl create -f nginx-ingress-controller-rbac.yml
 $ kubectl create -f nginx-ingress-controller.yaml
 ```
 
+# 
+- create secret
+- create ingress
+
 
 
 # files
