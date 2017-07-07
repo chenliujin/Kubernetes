@@ -16,7 +16,7 @@ echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
 # Install
 ```
 $ yum install -y socat
-$ yum install -y kubeadm-1.6.6-0.x86_64.rpm kubectl-1.6.6-0.x86_64.rpm kubelet-1.6.6-0.x86_64.rpm kubernetes-cni-0.5.1-0.x86_64.rpm
+$ yum install -y kubeadm-1.7.0-0.x86_64.rpm kubectl-1.7.0-0.x86_64.rpm kubelet-1.7.0-0.x86_64.rpm kubernetes-cni-0.5.1-0.x86_64.rpm
 
 $ systemctl enable kubelet && systemctl start kubelet
 $ systemctl status kubelet
@@ -24,10 +24,10 @@ $ kubelet logs
 ```
 
 # Kubernetes Images
-- gcr.io/google_containers/kube-apiserver-amd64:v1.6.6
-- gcr.io/google_containers/kube-controller-manager-amd64:v1.6.6
-- gcr.io/google_containers/kube-scheduler-amd64:v1.6.6
-- gcr.io/google_containers/kube-proxy-amd64:v1.6.6
+- gcr.io/google_containers/kube-apiserver-amd64:v1.7.0
+- gcr.io/google_containers/kube-controller-manager-amd64:v1.7.0
+- gcr.io/google_containers/kube-scheduler-amd64:v1.7.0
+- gcr.io/google_containers/kube-proxy-amd64:v1.7.0
 - gcr.io/google_containers/etcd-amd64:3.0.17
 - gcr.io/google_containers/pause-amd64:3.0
 - gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.2
@@ -42,7 +42,7 @@ $ kubelet logs
 ## Master init
 ```
 $ kubeadm reset
-$ kubeadm init --kubernetes-version=v1.6.6 --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.1.100 //使用内外地址
+$ kubeadm init --kubernetes-version=v1.7.0 --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.1.100 //使用内外地址
 
 Your Kubernetes master has initialized successfully!
 
