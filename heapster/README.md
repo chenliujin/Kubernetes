@@ -39,6 +39,11 @@ spec:
 ```
 
 # 参考文献
+- [heapster-rbac.yaml](https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/rbac/heapster-rbac.yaml)
+- [grafana.yaml](https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/influxdb/grafana.yaml)
+- [heapster.yaml](https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/influxdb/heapster.yaml)
+- [influxdb.yaml](https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/influxdb/influxdb.yaml)
+
 - [Heapster Metrics](https://github.com/kubernetes/heapster/blob/master/docs/storage-schema.md)
 - [kubernetes+docker监控之简介](https://my.oschina.net/fufangchun/blog/714530)
 - [Tools for Monitoring Compute, Storage, and Network Resources](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
