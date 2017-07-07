@@ -8,9 +8,9 @@ echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
 ```
 
 # [Download RPM](https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/primary.xml)
-- kubeadm-1.6.6
-- kubectl-1.6.6
-- kubelet-1.6.6
+- kubeadm-1.7.0
+- kubectl-1.7.0
+- kubelet-1.7.0
 - kubernetes-cni-0.5.1
 
 # Install
