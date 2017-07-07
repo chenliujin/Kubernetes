@@ -6,6 +6,10 @@ metadata:
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+  #- hosts:
+  #  - www.chenliujin.com
+  #  secretName: www.chenliujin.com
   rules:
   - host: www.chenliujin.com 
     http:
@@ -14,8 +18,4 @@ spec:
         backend:
           serviceName: monitoring-grafana 
           servicePort: 80
-  tls:
-  - hosts:
-    - www.chenliujin.com
-    secretName: www.chenliujin.com
 
