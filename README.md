@@ -24,6 +24,7 @@
 
 1 kubeadm init
 1 secret
+ - registry.io
 1 flannel
 1 ingress
 1 service
