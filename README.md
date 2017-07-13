@@ -10,3 +10,12 @@
 ---
 
 - [ ] 自动伸缩
+
+
+---
+
+1 kubeadm init
+1 flannel
+1 ingress
+1 service
+1 heapster + influxdb + grafana 
