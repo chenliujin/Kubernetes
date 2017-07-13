@@ -1,6 +1,6 @@
 
 # registry.io
-统一使用自己镜像仓库（registry.io）中的 image，搭建内网集群时不用手动同步 image。
+统一使用私有镜像仓库（registry.io）中的 image，搭建内网集群时不用手动同步 image。
 
 ---
 
