@@ -37,7 +37,6 @@ $ kubelet logs
 - gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.4
 - gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.4
 - gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.4
-- gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.10
 - gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
 
 
