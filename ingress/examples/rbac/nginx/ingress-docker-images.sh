@@ -15,7 +15,7 @@ images=(\
 
 for imageName in ${images[@]} ; do
 	docker pull 	docker.io/chenliujin/$imageName
-	docker tag 	docker.io/chenliujin/$imageName $registry/$imageName
+	docker tag 	docker.io/chenliujin/$imageName $registry/google_containers/$imageName
 	docker rmi 	docker.io/chenliujin/$imageName
-	docker push $registry/$imageName
+	docker push $registry/google_containers/$imageName
 done
