@@ -27,10 +27,10 @@
 
 ---
 
-1 kubeadm init
-1 secret
+1. kubeadm init
+1. secret
  - registry.io: namespace
-1 flannel
-1 ingress
-1 service
-1 heapster + influxdb + grafana 
+1. flannel
+1. ingress
+1. service
+1. heapster + influxdb + grafana 
