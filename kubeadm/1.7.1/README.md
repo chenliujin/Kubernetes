@@ -76,6 +76,10 @@ $ source /etc/profile
 
 
 # Node
+- gcr.io/google_containers/kube-proxy-amd64:v1.7.1
+- gcr.io/google_containers/pause-amd64:3.0
+
+
 ```
 $ kubeadm join --token 7e5bbb.4fbbd530bc3fad91 x.x.x.x:6443
 ```
