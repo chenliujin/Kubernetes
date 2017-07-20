@@ -29,7 +29,10 @@
 
 1. kubeadm init
 1. secret
- - registry.io: --namespace=kube-system
+ - registry.io: 
+  - --namespace=default
+  - --namespace=kube-system
+  - --namespace=nginx-ingress
 1. flannel
 1. ingress
 1. service
