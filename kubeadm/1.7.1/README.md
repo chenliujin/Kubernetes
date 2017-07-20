@@ -45,7 +45,7 @@ $ kubelet logs
 ## Master init
 ```
 $ kubeadm reset
-$ kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.1.100 //使用内外地址
+$ kubeadm init --skip-preflight-checks --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.1.100 //使用内外地址
 
 Your Kubernetes master has initialized successfully!
 
