@@ -28,10 +28,10 @@ $ kubelet logs
 ```
 
 # Kubernetes Images
-- gcr.io/google_containers/kube-apiserver-amd64:v1.7.0
-- gcr.io/google_containers/kube-controller-manager-amd64:v1.7.0
-- gcr.io/google_containers/kube-scheduler-amd64:v1.7.0
-- gcr.io/google_containers/kube-proxy-amd64:v1.7.0
+- gcr.io/google_containers/kube-apiserver-amd64:v1.7.1
+- gcr.io/google_containers/kube-controller-manager-amd64:v1.7.1
+- gcr.io/google_containers/kube-scheduler-amd64:v1.7.1
+- gcr.io/google_containers/kube-proxy-amd64:v1.7.1
 - gcr.io/google_containers/etcd-amd64:3.0.17
 - gcr.io/google_containers/pause-amd64:3.0
 - gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.2
