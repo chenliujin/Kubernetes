@@ -36,6 +36,8 @@ spec:
           requests:
             cpu: 10m
             memory: 20Mi
+      imagePullSecrets:
+        - name: registry.io
 ---
 apiVersion: v1
 kind: Service

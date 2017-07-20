@@ -34,3 +34,5 @@ spec:
           ports:
           - name: http
             containerPort: 80
+      imagePullSecrets:
+        - name: registry.io
