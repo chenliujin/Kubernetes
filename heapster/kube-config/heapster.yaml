@@ -22,7 +22,7 @@ spec:
       containers:
       - name: heapster
         #image: gcr.io/google_containers/heapster-amd64:v1.4.0
-        image: registy.io:5000/google_containers/heapster-amd64:v1.4.0
+        image: registry.io:5000/google_containers/heapster-amd64:v1.4.0
         imagePullPolicy: IfNotPresent
         command:
         - /heapster
