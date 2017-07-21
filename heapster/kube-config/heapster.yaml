@@ -21,12 +21,16 @@ spec:
       serviceAccountName: heapster
       containers:
       - name: heapster
-        image: gcr.io/google_containers/heapster-amd64:v1.4.0
+        #image: gcr.io/google_containers/heapster-amd64:v1.4.0
+        image: registy.io:5000/google_containers/heapster-amd64:v1.4.0
         imagePullPolicy: IfNotPresent
         command:
         - /heapster
         - --source=kubernetes:https://kubernetes.default
         - --sink=influxdb:http://monitoring-influxdb.kube-system.svc:8086
+      imagePullSecrets:
+        - name: registry.io
+
 ---
 apiVersion: v1
 kind: Service
