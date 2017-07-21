@@ -9,8 +9,8 @@ fi
 
 
 images=(\ 
-	defaultbackend:1.0 \ 
-	nginx-ingress-controller:0.9.0-beta.11
+	nginx-ingress-controller:0.9.0-beta.11 \ 
+	defaultbackend:1.0
 	)
 
 for imageName in ${images[@]} ; do
