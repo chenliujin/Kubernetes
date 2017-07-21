@@ -9,8 +9,8 @@
 
 ---
 
-- [ ] Ingress
- - [x] nginx
+# Ingress
+- [x] nginx
 
 ---
 
