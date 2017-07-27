@@ -37,3 +37,6 @@
 3. flannel
 4. ingress
 5. service
+
+# 参考文献
+- [Configure Liveness and Readiness Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)
