@@ -17,7 +17,7 @@ master=192.168.0.100
 # kubelet logs
 
 
-# 2. Master image
+# 2. image
 # https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/kube-apiserver-amd64
 #- gcr.io/google_containers/kube-apiserver-amd64:v1.7.1
 #- gcr.io/google_containers/kube-controller-manager-amd64:v1.7.1
@@ -30,6 +30,7 @@ master=192.168.0.100
 #- gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.4
 #- gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
 
+# Master
 images=(\ 
 	kube-apiserver-amd64:v$version \ 
 	kube-controller-manager-amd64:v$version \ 
@@ -41,6 +42,9 @@ images=(\
 	k8s-dns-kube-dns-amd64:1.14.4 \ 
 	k8s-dns-dnsmasq-nanny-amd64:1.14.4
 	)
+
+# Node
+
 for imageName in ${images[@]} ; do
 	docker pull 	docker.io/chenliujin/$imageName
 	docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
@@ -49,4 +53,8 @@ done
 
 
 
-#kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.0.100 
+# 3. Master
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.0.100 
+
+# 4. Node
+#kubeadm join --token ecc729.3bd44ea46a7c8832 192.168.0.100:6443
