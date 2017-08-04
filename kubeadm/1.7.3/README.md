@@ -14,20 +14,6 @@ echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
 - https://packages.cloud.google.com/yum/pool/e7a4403227dd24036f3b0615663a371c4e07a95be5fee53505e647fd8ae58aa6-kubernetes-cni-0.5.1-0.x86_64.rpm
 
 
-# Kubernetes Images
-- gcr.io/google_containers/kube-apiserver-amd64:v1.7.1
-- gcr.io/google_containers/kube-controller-manager-amd64:v1.7.1
-- gcr.io/google_containers/kube-scheduler-amd64:v1.7.1
-- gcr.io/google_containers/kube-proxy-amd64:v1.7.1
-- gcr.io/google_containers/etcd-amd64:3.0.17
-- gcr.io/google_containers/pause-amd64:3.0
-- gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.4
-- gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.4
-- gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.4
-- gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
-
-
-
 
 ## Master init
 ```
