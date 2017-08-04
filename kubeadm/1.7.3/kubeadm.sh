@@ -54,7 +54,7 @@ done
 
 
 # 3. Master
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.0.100 
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address $master 
 
 # 4. Node
-#kubeadm join --token ecc729.3bd44ea46a7c8832 192.168.0.100:6443
+#kubeadm join --token ecc729.3bd44ea46a7c8832 $master:6443
