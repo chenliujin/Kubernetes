@@ -14,16 +14,6 @@ echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
 - https://packages.cloud.google.com/yum/pool/e7a4403227dd24036f3b0615663a371c4e07a95be5fee53505e647fd8ae58aa6-kubernetes-cni-0.5.1-0.x86_64.rpm
 
 
-# Install
-```
-$ yum install -y socat
-$ yum install -y kubeadm-1.7.1-0.x86_64.rpm kubectl-1.7.1-0.x86_64.rpm kubelet-1.7.1-0.x86_64.rpm kubernetes-cni-0.5.1-0.x86_64.rpm
-
-$ systemctl enable kubelet && systemctl start kubelet
-$ systemctl status kubelet
-$ kubelet logs
-```
-
 # Kubernetes Images
 - gcr.io/google_containers/kube-apiserver-amd64:v1.7.1
 - gcr.io/google_containers/kube-controller-manager-amd64:v1.7.1
