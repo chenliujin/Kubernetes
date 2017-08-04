@@ -79,4 +79,4 @@ done
 #################################################
 
 
-#kubeadm join --token ecc729.3bd44ea46a7c8832 $master:6443
+#kubeadm join --token b78824.884b3295c2ae2530 $master:6443
