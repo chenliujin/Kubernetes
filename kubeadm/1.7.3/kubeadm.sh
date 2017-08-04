@@ -1,6 +1,7 @@
 #!/bin/bash
 
 version=1.7.3
+master=192.168.0.100
 
 #yum install -y \
 #	socat \
@@ -16,7 +17,19 @@ version=1.7.3
 # kubelet logs
 
 
-# Master
+# 2. Master image
+# https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/kube-apiserver-amd64
+#- gcr.io/google_containers/kube-apiserver-amd64:v1.7.1
+#- gcr.io/google_containers/kube-controller-manager-amd64:v1.7.1
+#- gcr.io/google_containers/kube-scheduler-amd64:v1.7.1
+#- gcr.io/google_containers/kube-proxy-amd64:v1.7.1
+#- gcr.io/google_containers/etcd-amd64:3.0.17
+#- gcr.io/google_containers/pause-amd64:3.0
+#- gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.4
+#- gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.4
+#- gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.4
+#- gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
+
 images=(\ 
 	kube-apiserver-amd64:v$version \ 
 	kube-controller-manager-amd64:v$version \ 
@@ -33,3 +46,7 @@ for imageName in ${images[@]} ; do
 	docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
 	docker rmi 	docker.io/chenliujin/$imageName
 done
+
+
+
+#kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address 192.168.0.100 
