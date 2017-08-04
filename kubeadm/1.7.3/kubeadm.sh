@@ -3,10 +3,15 @@
 version=1.7.3
 #master=192.168.0.100
 
+
+
+
 #################################################
 # 1. install
 #################################################
 
+#echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
+#echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
 
 #yum install -y \
 #	socat \
@@ -53,16 +58,16 @@ version=1.7.3
 #	)
 
 # Node
-images=(\ 
-	kube-proxy-amd64:v$version \ 
-	)
-
-
-for imageName in ${images[@]} ; do
-	docker pull 	docker.io/chenliujin/$imageName
-	docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
-	docker rmi 	docker.io/chenliujin/$imageName
-done
+#images=(\ 
+#	kube-proxy-amd64:v$version \ 
+#	)
+#
+#
+#for imageName in ${images[@]} ; do
+#	docker pull 	docker.io/chenliujin/$imageName
+#	docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
+#	docker rmi 	docker.io/chenliujin/$imageName
+#done
 
 
 
@@ -79,4 +84,4 @@ done
 #################################################
 
 
-#kubeadm join --token b78824.884b3295c2ae2530 $master:6443
+#kubeadm join --token c63f2f.b20a27a0738fbe16 $master:6443
