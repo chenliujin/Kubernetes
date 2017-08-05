@@ -57,9 +57,16 @@ version=1.7.3
 #	k8s-dns-dnsmasq-nanny-amd64:1.14.4
 #	)
 
+########################
 # Node
+########################
+
 #images=(\ 
 #	kube-proxy-amd64:v$version \ 
+#	pause-amd64:3.0 \ 
+#	k8s-dns-sidecar-amd64:1.14.4 \ 
+#	k8s-dns-kube-dns-amd64:1.14.4 \ 
+#	k8s-dns-dnsmasq-nanny-amd64:1.14.4
 #	)
 #
 #
