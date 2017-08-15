@@ -59,9 +59,12 @@ images=(\
 	)
 
 for imageName in ${images[@]} ; do
-	docker pull 	docker.io/chenliujin/$imageName
-	docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
-	docker rmi 	docker.io/chenliujin/$imageName
+	#docker pull 	docker.io/chenliujin/$imageName
+	#docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
+	#docker rmi 	docker.io/chenliujin/$imageName
+
+	#docker save gcr.io/google_containers/$imageName > ~/image/$imageName.rar
+	#docker load < ~/image/$imageName.rar
 done
 
 
