@@ -92,4 +92,4 @@ kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address $mas
 #################################################
 
 
-#kubeadm join --token c63f2f.b20a27a0738fbe16 $master:6443
+#kubeadm join --token $token $master:6443
