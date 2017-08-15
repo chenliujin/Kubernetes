@@ -45,17 +45,17 @@ version=1.7.3
 #- gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
 
 # Master
-#images=(\ 
-#	kube-apiserver-amd64:v$version \ 
-#	kube-controller-manager-amd64:v$version \ 
-#	kube-scheduler-amd64:v$version \ 
-#	kube-proxy-amd64:v$version \ 
-#	etcd-amd64:3.0.17 \ 
-#	pause-amd64:3.0 \ 
-#	k8s-dns-sidecar-amd64:1.14.4 \ 
-#	k8s-dns-kube-dns-amd64:1.14.4 \ 
-#	k8s-dns-dnsmasq-nanny-amd64:1.14.4
-#	)
+images=(\ 
+	kube-apiserver-amd64:v$version \ 
+	kube-controller-manager-amd64:v$version \ 
+	kube-scheduler-amd64:v$version \ 
+	kube-proxy-amd64:v$version \ 
+	etcd-amd64:3.0.17 \ 
+	pause-amd64:3.0 \ 
+	k8s-dns-sidecar-amd64:1.14.4 \ 
+	k8s-dns-kube-dns-amd64:1.14.4 \ 
+	k8s-dns-dnsmasq-nanny-amd64:1.14.4
+	)
 
 ########################
 # Node
@@ -68,13 +68,13 @@ version=1.7.3
 #	k8s-dns-kube-dns-amd64:1.14.4 \ 
 #	k8s-dns-dnsmasq-nanny-amd64:1.14.4
 #	)
-#
-#
-#for imageName in ${images[@]} ; do
-#	docker pull 	docker.io/chenliujin/$imageName
-#	docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
-#	docker rmi 	docker.io/chenliujin/$imageName
-#done
+
+
+for imageName in ${images[@]} ; do
+	docker pull 	docker.io/chenliujin/$imageName
+	docker tag 	docker.io/chenliujin/$imageName gcr.io/google_containers/$imageName
+	docker rmi 	docker.io/chenliujin/$imageName
+done
 
 
 
@@ -83,7 +83,7 @@ version=1.7.3
 #################################################
 
 
-#kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address $master 
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address $master 
 
 
 #################################################
