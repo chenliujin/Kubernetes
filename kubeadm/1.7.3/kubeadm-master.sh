@@ -2,6 +2,7 @@
 
 version=1.7.3
 #master=192.168.0.100
+token=
 
 
 
@@ -83,7 +84,7 @@ done
 #################################################
 
 
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address $master 
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address $master --token $token
 
 
 #################################################
