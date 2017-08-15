@@ -1,7 +1,7 @@
 #!/bin/bash
 
 version=1.7.3
-#master=192.168.0.100
+master=
 token=
 
 
@@ -45,31 +45,18 @@ token=
 #- gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.4
 #- gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
 
-# Master
-images=(\ 
-	kube-apiserver-amd64:v$version \ 
-	kube-controller-manager-amd64:v$version \ 
-	kube-scheduler-amd64:v$version \ 
-	kube-proxy-amd64:v$version \ 
-	etcd-amd64:3.0.17 \ 
-	pause-amd64:3.0 \ 
-	k8s-dns-sidecar-amd64:1.14.4 \ 
-	k8s-dns-kube-dns-amd64:1.14.4 \ 
-	k8s-dns-dnsmasq-nanny-amd64:1.14.4
-	)
 
 ########################
 # Node
 ########################
 
-#images=(\ 
-#	kube-proxy-amd64:v$version \ 
-#	pause-amd64:3.0 \ 
-#	k8s-dns-sidecar-amd64:1.14.4 \ 
-#	k8s-dns-kube-dns-amd64:1.14.4 \ 
-#	k8s-dns-dnsmasq-nanny-amd64:1.14.4
-#	)
-
+images=(\ 
+	kube-proxy-amd64:v$version \ 
+	pause-amd64:3.0 \ 
+	k8s-dns-sidecar-amd64:1.14.4 \ 
+	k8s-dns-kube-dns-amd64:1.14.4 \ 
+	k8s-dns-dnsmasq-nanny-amd64:1.14.4
+	)
 
 for imageName in ${images[@]} ; do
 	docker pull 	docker.io/chenliujin/$imageName
@@ -78,18 +65,8 @@ for imageName in ${images[@]} ; do
 done
 
 
-
-#################################################
-# 3. Master
-#################################################
-
-
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address $master --token $token --token-ttl 0
-
-
 #################################################
 # 4. Node
 #################################################
 
-
-#kubeadm join --token $token $master:6443
+kubeadm join --token $token $master:6443
