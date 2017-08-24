@@ -39,4 +39,5 @@
 5. service
 
 # 参考文献
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
 - [Configure Liveness and Readiness Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)
