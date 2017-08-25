@@ -1,8 +1,16 @@
 
+
+# 给 node 打 label
+```
+kubectl label c2 beta.kubernetes.io/fluentd-ds-ready=true 
+```
+
+
+
 # open docker log
 ```
 $ vim /etc/sysconfig/docker
-remove --log-driver=journald, or /var/log/containers/ has no logs
+remove --log-driver=journald, 否则 /var/log/containers/ has no logs
 ```
 
 # Q&A
