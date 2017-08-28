@@ -1,4 +1,11 @@
 
+# node 配置
+```
+$ vim /etc/sysctl.conf
+vm.max_map_count = 262144
+
+$ sysctl -p
+```
 
 # 给 node 打 label
 ```
