@@ -38,3 +38,4 @@ remove --log-driver=journald, 否则 /var/log/containers/ has no logs
 - [fluentd](http://docs.fluentd.org/v0.12/articles/kubernetes-fluentd)
 - [ELK stack on Kubernetes](https://crondev.com/elk-stack-kubernetes/)
 - https://github.com/pires/kubernetes-elasticsearch-cluster
+- [教程](https://kibana.logstash.es/content/)
