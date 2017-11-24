@@ -5,4 +5,4 @@
 1. kubectl create -f nginx-ingress-controller-service.yml
 
 # 参考文献
-- [Role Based Access Control](https://github.com/kubernetes/ingress/tree/master/examples/rbac/nginx)
+- [NGINX Ingress Controller](https://github.com/kubernetes/ingress-nginx/)
