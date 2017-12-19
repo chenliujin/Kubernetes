@@ -6,5 +6,5 @@ metadata:
   labels:
     app: nginx-ingress
 data:
-  proxy-body-size: 30m        
+  proxy-body-size: 100m        
   proxy-connect-timeout: 75s
