@@ -4,7 +4,11 @@
 ### 打标签（label）
 ```
 # kubectl label nodes {node-name} {label_key=label_value}
-$ kubectl label nodes x.x.x.x node=mongo
+
+## 打标签
+$ kubectl label nodes 192.168.0.11 node=mongo
+
+## 查询
 $ kubectl get node -a -l "node=mongo"
 ```
 
