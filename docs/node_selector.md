@@ -3,7 +3,7 @@
 
 ### 打标签（label）
 ```
-# kubectl label nodes {node-name} {label_key=label_value}
+# kubectl label nodes <node-name> <label-key>=<label-value> 
 
 ## 打标签
 $ kubectl label nodes 192.168.0.11 node=mongo
