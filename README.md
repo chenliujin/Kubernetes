@@ -1,3 +1,6 @@
+# 服务器
+- k1: 公网IP
+- k2: 公网IP，需要调用第三方服务网关的服务部署到 k2
 
 # registry.io
 统一使用私有镜像仓库（registry.io）中的 image，搭建内网集群时不用手动同步 image。
