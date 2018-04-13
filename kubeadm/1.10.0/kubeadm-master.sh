@@ -46,18 +46,17 @@ token=
 #- gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
 
 # Master
-#	kube-apiserver-amd64:v$version \ 
-#	kube-controller-manager-amd64:v1.10.1 \ 
-#	kube-scheduler-amd64:v$version \ 
-#	kube-proxy-amd64:v$version \ 
 #	pause-amd64:3.1 \ 
 #	k8s-dns-sidecar-amd64:1.14.4 \ 
 #	k8s-dns-kube-dns-amd64:1.14.4 \ 
 #	k8s-dns-dnsmasq-nanny-amd64:1.14.4
+#	kube-proxy-amd64:v1.10.1 \ 
 
 images=(\ 
-	pause-amd64:3.1 \ 
   kube-controller-manager-amd64:v1.10.1 \ 
+	kube-scheduler-amd64:v1.10.1 \ 
+	kube-apiserver-amd64:v1.10.1 \ 
+	pause-amd64:3.1 \ 
 	etcd-amd64:3.1.12
 	)
 
