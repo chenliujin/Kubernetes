@@ -45,9 +45,6 @@ token=
 #- gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
 
 # Master
-#	k8s-dns-sidecar-amd64:1.14.4 \ 
-#	k8s-dns-kube-dns-amd64:1.14.4 \ 
-#	k8s-dns-dnsmasq-nanny-amd64:1.14.4
 
 images=(\ 
   kube-controller-manager-amd64:v1.10.1 \ 
@@ -55,8 +52,11 @@ images=(\
 	kube-apiserver-amd64:v1.10.1 \ 
 	kube-proxy-amd64:v1.10.1 \ 
 	pause-amd64:3.1 \ 
-	etcd-amd64:3.1.12
-	)
+	etcd-amd64:3.1.12 \ 
+	k8s-dns-kube-dns-amd64:1.14.4 \ 
+	k8s-dns-sidecar-amd64:1.14.4 \ 
+	k8s-dns-dnsmasq-nanny-amd64:1.14.4
+)
 
 ########################
 # Node
