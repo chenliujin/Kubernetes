@@ -55,14 +55,14 @@ token=
 
 #images=(\ 
 #	pause-amd64:3.0 \ 
-#	k8s-dns-sidecar-amd64:1.14.4 \ 
-#	k8s-dns-kube-dns-amd64:1.14.4 \ 
-#	k8s-dns-dnsmasq-nanny-amd64:1.14.4
 #	)
 
 images=(\ 
 	kube-proxy-amd64:v1.10.1 \ 
-	pause-amd64:3.1
+	pause-amd64:3.1 \ 
+	k8s-dns-sidecar-amd64:1.14.4 \ 
+	k8s-dns-kube-dns-amd64:1.14.4 \ 
+	k8s-dns-dnsmasq-nanny-amd64:1.14.4
 )
 
 for imageName in ${images[@]} ; do
