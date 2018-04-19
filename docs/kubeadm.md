@@ -1,0 +1,6 @@
+
+
+
+```
+kubeadm token create
+```
