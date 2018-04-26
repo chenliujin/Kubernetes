@@ -85,4 +85,5 @@ done
 #################################################
 
 
-#kubeadm join --token $token $master:6443
+# 1. kubeadm token create
+# 2. kubeadm join 172.16.0.14:6443 --token gi43xb.8kddxsps0u4wfk4p --discovery-token-ca-cert-hash sha256:d4c910add73ebd5119657bc16b683023f0d6a615eed2111f367a54ecb1e6a961
