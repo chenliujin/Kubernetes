@@ -1,17 +1,16 @@
 #!/bin/bash
 
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
+echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
+
+
+
 master=
 token=
-
-
-
 
 #################################################
 # 1. install
 #################################################
-
-#echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
-#echo 1 > /proc/sys/net/bridge/bridge-nf-call-ip6tables
 
 #yum install -y \
 #	socat \
