@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: chenliujin-admin-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: ms.iot-sw.net 
+    http:
+      paths:
+      - path: /chenliujin/admin
+        backend:
+          serviceName: chenliujin-admin 
+          servicePort: 80
+

@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chenliujin-admin
+spec:
+  selector:
+    app: chenliujin-admin
+  ports:
+  - port: 80 
+    targetPort: 80 
+---
+apiVersion: v1
+kind: ReplicationController 
+metadata:
+  name: chenliujin-admin
+spec:
+  replicas: 1
+  selector: 
+    app: chenliujin-admin
+  template:
+    metadata:
+      labels:
+        app: chenliujin-admin
+    spec:
+      containers:
+      - name: chenliujin-admin
+      image: docker.io:5000/chenliujin-admin:1.0.3
+        imagePullPolicy: Always 
+        ports:
+        - containerPort: 80 
+      imagePullSecrets:
+        - name: docker.io 
