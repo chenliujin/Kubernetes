@@ -18,7 +18,7 @@ $ kubectl create -f ./kube-config/
 ```
 
 ## Ingress
-- 需加上 ingress.kubernetes.io/rewrite-target: / 进行重定向，实际请求的资源在 / 下面，js & css 等文件不在 /grafana/ 下
+- 需加上 nginx.ingress.kubernetes.io/rewrite-target: / 进行重定向，实际请求的资源在 / 下面，js & css 等文件不在 /grafana/ 下
 ```
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -26,7 +26,7 @@ metadata:
   name: grafana-ingress
   namespace: kube-system
   annotations:
-    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: www.chenliujin.com
