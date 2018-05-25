@@ -8,15 +8,15 @@ if [ -z $registry ]; then
 fi	
 
 images=(\ 
-	heapster-grafana-amd64:v4.4.1 \ 
-	heapster-influxdb-amd64:v1.1.1 \ 
-	heapster-amd64:v1.4.0
-	)
+	heapster-grafana-amd64:v4.4.3 \ 
+	heapster-influxdb-amd64:v1.3.3 \ 
+	heapster-amd64:v1.5.3
+)
 
 for imageName in ${images[@]} ; do
-	docker pull 	docker.io/chenliujin/$imageName
-	docker tag 	docker.io/chenliujin/$imageName $registry/google_containers/$imageName
+	docker pull docker.io/chenliujin/$imageName
+	docker tag 	docker.io/chenliujin/$imageName $registry/$imageName
 	docker rmi 	docker.io/chenliujin/$imageName
 
-	docker push $registry/google_containers/$imageName
+	docker push $registry/$imageName
 done
