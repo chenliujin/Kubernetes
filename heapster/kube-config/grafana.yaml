@@ -13,8 +13,7 @@ spec:
     spec:
       containers:
       - name: grafana
-        # image: k8s.gcr.io/heapster-grafana-amd64:v4.4.3
-        image: docker.io:5000/google_containers/heapster-grafana-amd64:v4.4.1
+        image: k8s.gcr.io/heapster-grafana-amd64:v4.4.3
         ports:
         - containerPort: 3000
           protocol: TCP
@@ -43,8 +42,8 @@ spec:
           # If you're only using the API Server proxy, set this value instead:
           # value: /api/v1/namespaces/kube-system/services/monitoring-grafana/proxy
           value: /grafana/
-      imagePullSecrets:
-        - name: docker.io
+      # imagePullSecrets:
+      # - name: k8s.gcr.io
       volumes:
       - name: ca-certificates
         hostPath:
