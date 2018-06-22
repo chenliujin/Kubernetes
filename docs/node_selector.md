@@ -9,7 +9,7 @@
 $ kubectl label nodes 192.168.0.11 node=mongo
 
 ## 查询
-$ kubectl get node -a -l "node=mongo"
+$ kubectl get node -l "node=mongo"
 ```
 
 ### 删除已添加的 label：key 后面加 - 表示为删除这个 key 的 label
