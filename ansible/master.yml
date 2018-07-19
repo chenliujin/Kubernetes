@@ -1,0 +1,23 @@
+
+
+- hosts: kube-master
+  vars:
+    apiserver_address: "{{ ansible_eth0['ipv4']['address']}}"
+  tasks:
+    - name:  初始化
+      shell: kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address={{ apiserver_address }} 
+
+    - name:  k8s admin
+      shell: HOME=~; sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config; sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+    - name:  kubeadm join 命令
+      shell: kubeadm token create --print-join-command
+      register: cluster_join
+
+    - set_fact: cluster_join_script={{ cluster_join.stdout }}
+
+    - name: kube-flannel conf
+      copy: src=./kube-flannel/ dest=/etc/kubernetes/kube-flannel/
+
+    - name:  cni
+      shell: kubectl apply -f /etc/kubernetes/kube-flannel/
