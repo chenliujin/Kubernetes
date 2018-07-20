@@ -5,7 +5,7 @@
     apiserver_address: "{{ ansible_eth0['ipv4']['address']}}"
   tasks:
     - name:  初始化
-      shell: kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address={{ apiserver_address }} 
+      shell: kubeadm init --kubernetes-version=v1.11.1 --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address={{ apiserver_address }} 
 
     - name:  k8s admin
       shell: HOME=~; sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config; sudo chown $(id -u):$(id -g) $HOME/.kube/config
