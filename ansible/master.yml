@@ -1,6 +1,6 @@
 
 
-- hosts: kube-master
+- hosts: k8s-master
   vars:
     apiserver_address: "{{ ansible_eth0['ipv4']['address']}}"
   tasks:
@@ -17,7 +17,7 @@
     - set_fact: cluster_join_script={{ cluster_join.stdout }}
 
     - name: kube-flannel conf
-      copy: src=./kube-flannel/ dest=/etc/kubernetes/kube-flannel/
+      copy: src=./etc/kubernetes/kube-flannel.yml dest=/etc/kubernetes/kube-flannel/
 
     - name:  cni
       shell: kubectl apply -f /etc/kubernetes/kube-flannel/

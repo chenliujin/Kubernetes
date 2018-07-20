@@ -1,0 +1,8 @@
+- hosts: k8s-node
+  remote_user: root
+  tasks:
+    - set_fact: cluster_join_script={{ hostvars[groups['k8s-master'][0]]['cluster_join_script'] }}
+
+    - name: kube join
+      shell: echo '' | {{ cluster_join_script }}
+      when: cluster_join_script is defined
