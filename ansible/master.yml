@@ -4,6 +4,15 @@
   vars:
     apiserver_address: "{{ ansible_eth0['ipv4']['address']}}"
   tasks:
+    - name: image script
+      copy: src=./bin/kubeadm-master.sh dest=~
+
+    - name: k8s images
+      shell: bash ~/kubeadm-master.sh
+
+    - name: remove script
+      shell: rm -f ~/kubeadm-master.sh
+
     - name:  初始化
       shell: kubeadm init --kubernetes-version=v1.11.1 --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address={{ apiserver_address }} 
 
