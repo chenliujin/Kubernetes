@@ -34,7 +34,7 @@ images=(\
 	kube-proxy-amd64:v1.11.1 \ 
 	kube-scheduler-amd64:v1.11.1 \ 
 	pause:3.1 \ 
-	etcd-amd64:3.2.8 \ 
+	etcd-amd64:3.2.18 \ 
 	coredns:1.1.3 \ 
 )
 
