@@ -1,7 +1,10 @@
 #!/bin/bash
 
+docker pull quay.io/coreos/flannel:v0.10.0-amd64
+
 images=(\ 
-	pause:3.1
+  kube-proxy-amd64:v1.11.1 \
+  pause:3.1
 )
 
 for imageName in ${images[@]} ; do
