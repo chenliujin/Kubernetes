@@ -24,3 +24,6 @@
 
     - name: kubeadm
       yum: name=kubeadm state=latest
+
+    - name: kubelet
+      shell: systemctl enable kubelet; systemctl start kubelet
