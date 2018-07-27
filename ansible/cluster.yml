@@ -16,3 +16,11 @@
 
     - name: sysctl
       shell: sysctl --system
+
+    - name: repo
+      copy:
+        src: ./etc/yum.repos.d/kubernetes.repo
+        dest: /etc/yum.repos.d/
+
+    - name: kubeadm
+      yum: name=kubeadm state=latest
